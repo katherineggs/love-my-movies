@@ -1,0 +1,102 @@
+.container1{
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    padding: 0 0% 0 5%;
+    position: fixed;
+    top: 0%;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+    white-space: nowrap;
+}
+.container2{
+    background: linear-gradient(to right, #ffffff,#fbf1cf);
+    padding: 0 0 0 5%;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    position: fixed;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+}
+.box{
+    border-radius: 15px;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: black;
+    width: 20%;
+    height: 65%;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    display: inline-block;
+    position: static;
+}
+.overview{
+    width: 60%;
+    padding: 0 0 10% 0;
+    border: 1px;
+    background-color:palevioletred;
+    float: right;
+    word-wrap: break-word;
+}
+.img1{ 
+    /* botones */
+    height: 20%;
+    width: 20%;
+    padding: 20% 0 0 3%;
+}
+.imovie{
+    height: 70%;
+    width: 40%;
+    padding: 5% 0 0 0;
+    float: left;
+}
+.title{
+    padding: 5% 0 0 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+.gender{
+    padding: 0 0 0 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: slategrey;
+    font-size: 75%;
+}
+/* .description{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 90%;
+    padding: 0; */
+/* input[name=button1]{
+    height: 48px;
+    width: 48px;
+    padding: 0 0 0 15%;
+}
+input[name=button2]{
+    height: 48px;
+    width: 48px;
+    padding: 0 0 0 30%;
+} */
+
+/* .button1{
+    display:inline-block;
+    padding: 4% 10% 4% 10%;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:500;
+    font-size: 10px;
+    color: black;
+    text-align:center;
+    transition: all 0.2s;
+    text-transform:uppercase;
+    width: 40%;
+    vertical-align: center;
+    background-color: orangered;
+   
+}

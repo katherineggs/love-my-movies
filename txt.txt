@@ -1,0 +1,28 @@
+<!-- {% for char,desc in dicc.items() %}
+        {% if char == "poster_path"  %}
+        <a href="">
+            <img class="imovie" src="/static/movie.jpg ">
+        </a>
+        {% endif %}
+        {% if char == "title" %}
+        <h2 class="title">
+            {{desc}}
+        </h2>
+        {% endif %}
+        <p class="gender">
+            Genero
+        </p>
+        <p class="description">
+            Movie description
+        </p>
+        <a href=""> 
+            <img class="img1" src="static/heart3.png">
+        </a>
+        <a href="">
+            <img class="img1" src="static/ex5.png">
+        </a> -->
+        <!-- <form>
+            <input name="button1" type="image" src="static/heart3.png" alt="like" >
+            <input name="button2" type="image" src="static/ex5.png" alt="dislike" >
+        </form> -->
+        <!-- {% endfor %} -->
