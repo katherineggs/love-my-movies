@@ -10,23 +10,40 @@
     </head>
     <body>
         <div class="container1">
-            <h1>
-                Our Favorite Movies
-            </h1>
-            {% for cont in range (titulos|length) %} 
+            <div class="big">
+                <h1>
+                    Our Favorite Movies
+                </h1>
+            </div>
+            {% set top = dicc['top_rated']  %}
+            {% for cont in range (top['titles']|length) %} 
                 {% include 'includes/box.html' %}
             {% endfor %}
         </div>
+        <div class="bigdiv">
+            <div class="now">
+                <h1>
+                    Playing Now
+                </h1>
+                {% set top = dicc['playing_now']  %}
+                {% for cont in range (top['titles']|length -10 ) %} 
+                    {% include 'includes/box.html' %}
+                {% endfor %}
+            </div>
+        </div>
 
-        <div class="container2">
-            <h1>
-                Playing Now
-            </h1>
+        <div class="bigdiv">
+            <div class="comin">
+                <h1>
+                    Up Coming
+                </h1>
+                {% set top = dicc['upcoming']  %}
+                {% for cont in range (top['titles']|length -10) %} 
+                    {% include 'includes/box.html' %}
+                {% endfor %}
+            </div>
+            
         </div>
-        <div class="container3">
-            <h1>
-                Up Coming
-            </h1>
-        </div>
+        
     </body>
 </html>
