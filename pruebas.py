@@ -49,3 +49,22 @@ dicc["playing_now"] ={"titles":titulos, "poster":poster, "votos":votos, "adult":
 top = dicc["top_rated"]
 poster= top["poster"]
 print(poster)
+
+dic = {}
+def diccionario(url,nombre):
+    results = config(url)["results"]
+    titulos,poster, votos, overview, adult = [], [], [], [], []
+    for i in results:
+        titulos.append(i["title"])
+        poster.append(i["poster_path"])
+        votos.append(i["vote_count"])
+        overview.append(i["overview"])
+        adult.append(i["adult"])
+    dic[nombre] ={"titles":titulos, "poster":poster, "votos":votos, "overview":overview, "adult":adult}
+    return dic
+def principal():
+    diccionario(utop,"top_rated")
+    diccionario(upop,"playing_now")
+    diccionario(unow,"upcoming")
+    print(dic)
+principal()

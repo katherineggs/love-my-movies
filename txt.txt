@@ -1,28 +1,46 @@
-<!-- {% for char,desc in dicc.items() %}
-        {% if char == "poster_path"  %}
-        <a href="">
-            <img class="imovie" src="/static/movie.jpg ">
-        </a>
-        {% endif %}
-        {% if char == "title" %}
-        <h2 class="title">
-            {{desc}}
-        </h2>
-        {% endif %}
-        <p class="gender">
-            Genero
-        </p>
-        <p class="description">
-            Movie description
-        </p>
+<div class="overview">
+                {% set titulos = top['titles'] %}
+            <h2 class="title">
+                {{titulos[cont]}}
+            </h2>  
+        </div>   
+        <div class="categorie">
+            {% set adult = top['adult'] %}
+            <p class="gender">
+                {% if adult[cont] %}
+                Categoria: Adultos
+                {%else%}
+                Categoria: Todo publico
+                {% endif %}
+            </p>
+        </div>
+        <div class="overview">
+            {% set over = top['overview'] %}
+            {% set over = (over[cont])[:150] %}
+            {{over}}...
+        </div>
         <a href=""> 
             <img class="img1" src="static/heart3.png">
         </a>
+        <h2 class="count">
+            {% set votos = top['votos'] %}
+            {{votos[cont]}}
+        </h2>
         <a href="">
             <img class="img1" src="static/ex5.png">
-        </a> -->
-        <!-- <form>
-            <input name="button1" type="image" src="static/heart3.png" alt="like" >
-            <input name="button2" type="image" src="static/ex5.png" alt="dislike" >
-        </form> -->
-        <!-- {% endfor %} -->
+        </a> 
+
+
+
+
+<!-- <form action="">
+            <input class="img1" name="button1" type="image" src="static/heart3.png" alt="like" onclick="{{votos[cont]+1}}">
+            <h2 class="count">
+                {% if button1 %}
+                    {{votos[cont]+1}}
+                {% else %}
+                    {{votos[cont]}}
+                {% endif %}
+            </h2>
+            <input class="img1" name="button2" type="image" src="static/ex5.png" alt="dislike" >
+        </form> --!>

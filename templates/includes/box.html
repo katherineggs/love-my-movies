@@ -24,6 +24,18 @@
             {% set over = (over[cont])[:100] %}
             {{over}}...
         </div>
+        {% if top == dicc['playing_now'] or top == dicc['upcoming']%}
+        <a href=""> 
+            <img class="special" src="static/heart3.png">
+        </a>
+        <h2 class="spe_count">
+            {% set votos = top['votos'] %}
+            {{votos[cont]}}
+        </h2>
+        <a href="">
+            <img class="special" src="static/ex5.png">
+        </a> 
+        {% else %}
         <a href=""> 
             <img class="img1" src="static/heart3.png">
         </a>
@@ -34,5 +46,5 @@
         <a href="">
             <img class="img1" src="static/ex5.png">
         </a> 
-
+        {%endif%}
 </div>
