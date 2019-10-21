@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import requests,json,sys,csv
+import requests,json,sys
 key= "af0ee50125705c5e3b5898f7638853d5"
 app = Flask(__name__)
 
@@ -23,7 +23,7 @@ def diccionario(url,nombre):
     results = config(url)["results"]
     titulos,poster, votos, overview, adult = [], [], [], [], []
     for i in results:
-        titulos.append(i["title"])
+        titulos.append(i["original_title"])
         poster.append(i["poster_path"])
         votos.append(i["vote_count"])
         overview.append(i["overview"])
