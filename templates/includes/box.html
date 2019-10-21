@@ -1,20 +1,41 @@
 <div class="box">
         <a href="">
-            <img class="imovie" src="">
+            <img class="imovie" src=" {{images['base_url'] + 'original' + poster[cont] }} ">
         </a>
-        <h2 class="title">
-            {{titulos[cont]}}
-        </h2>     
+        <div class="overview">
+            <h2 class="title">
+                {{titulos[cont]}}
+            </h2>  
+        </div>   
         <p class="gender">
-            Generoooo
+            {% if adult[cont] %}
+            Categoria: Adultos
+            {%else%}
+            Categoria: Todo publico
+            {% endif %}
         </p>
         <div class="overview">
-            {{overview[cont]}}
+            {% set over = (overview[cont])[:150] %}
+            {{over}}...
         </div>
         <a href=""> 
             <img class="img1" src="static/heart3.png">
         </a>
+        <h2 class="count">
+            {{votos[cont]}}
+        </h2>
         <a href="">
             <img class="img1" src="static/ex5.png">
         </a> 
+        <!-- <form action="">
+            <input class="img1" name="button1" type="image" src="static/heart3.png" alt="like" onclick="{{votos[cont]+1}}">
+            <h2 class="count">
+                {% if button1 %}
+                    {{votos[cont]+1}}
+                {% else %}
+                    {{votos[cont]}}
+                {% endif %}
+            </h2>
+            <input class="img1" name="button2" type="image" src="static/ex5.png" alt="dislike" >
+        </form> -->
 </div>

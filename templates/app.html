@@ -7,23 +7,25 @@
         </title>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <link rel="stylesheet" href="/static/css/st.css" >
-        <!-- <link rel="stylesheet" href="/static/css/bootstrap.css/" > -->
     </head>
     <body>
         <div class="container1">
             <h1>
                 Our Favorite Movies
             </h1>
-
             {% for cont in range (titulos|length) %} 
                 {% include 'includes/box.html' %}
             {% endfor %}
-
         </div>
 
         <div class="container2">
             <h1>
-                Categories
+                Playing Now
+            </h1>
+        </div>
+        <div class="container3">
+            <h1>
+                Up Coming
             </h1>
         </div>
     </body>
