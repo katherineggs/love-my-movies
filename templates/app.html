@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="container1">
-            <div class="big">
+            <div class="big1">
                 <h1>
                     Our Favorite Movies
                 </h1>
@@ -22,9 +22,12 @@
         </div>
         <div class="bigdiv">
             <div class="now">
-                <h1>
-                    Playing Now
-                </h1>
+                <div class="big">
+                    <h1>
+                        Playing Now
+                    </h1>
+                </div>
+                
                 {% set top = dicc['playing_now']  %}
                 {% for cont in range (top['titles']|length -10 ) %} 
                     {% include 'includes/box.html' %}
@@ -34,9 +37,12 @@
 
         <div class="bigdiv">
             <div class="comin">
-                <h1>
-                    Up Coming
-                </h1>
+                <div class="big">
+                    <h1>
+                        Up Coming
+                    </h1>
+                </div>
+                
                 {% set top = dicc['upcoming']  %}
                 {% for cont in range (top['titles']|length -10) %} 
                     {% include 'includes/box.html' %}
