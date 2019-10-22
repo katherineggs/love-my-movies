@@ -1,14 +1,26 @@
 <div class="box">
+        <!-- poster 'poster_path' -->
         <a href="">
             {% set poster = top['poster'] %}
             <img class="imovie" src=" {{images['base_url'] + 'original' + poster[cont] }} ">
         </a>
+        <!-- titulo 'original_title' -->
+        {% if top == dicc['playing_now'] or top == dicc['upcoming']%}
+        <div class="special_tit">
+            {% set titulos = top['titles'] %}
+            <h2 class="spe_count">
+                {{titulos[cont]}}
+            </h2>  
+        </div>
+        {%else%}
         <div class="overview">
-                {% set titulos = top['titles'] %}
+            {% set titulos = top['titles'] %}
             <h2 class="title">
                 {{titulos[cont]}}
             </h2>  
         </div>
+        {%endif%}
+        <!-- categoria 'adult:bool' -->
         <div class="categorie">
             {% set adult = top['adult'] %}
             <p class="gender">
@@ -19,19 +31,23 @@
                 {% endif %}
             </p>
         </div>
+        <!-- descripcion 'overview' -->
         <div class="overview">
             {% set over = top['overview'] %}
             {% set over = (over[cont])[:100] %}
             {{over}}...
         </div>
+        <!-- boton -->
         {% if top == dicc['playing_now'] or top == dicc['upcoming']%}
         <a href=""> 
             <img class="special" src="static/heart3.png">
         </a>
+        <!-- votos -->
         <h2 class="spe_count">
             {% set votos = top['votos'] %}
             {{votos[cont]}}
         </h2>
+        <!-- boton -->
         <a href="">
             <img class="special" src="static/ex5.png">
         </a> 
@@ -39,6 +55,7 @@
         <a href=""> 
             <img class="img1" src="static/heart3.png">
         </a>
+        <!-- votos -->
         <h2 class="count">
             {% set votos = top['votos'] %}
             {{votos[cont]}}

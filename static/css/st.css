@@ -105,6 +105,16 @@ h1{
     color: white;
     float: left;
 }
+.special_tit{
+    word-wrap: break-word;
+    white-space: normal;
+    width: 60%;
+    padding: 0 0 10px 0;
+    border: 1px;
+    font-size: 20px;
+    color: white;
+    float: right;
+}
 
 
 
