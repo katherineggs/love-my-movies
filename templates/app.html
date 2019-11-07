@@ -16,7 +16,7 @@
                 </h1>
             </div>
             {% set top = dicc['top_rated']  %}
-            {% for cont in range (top['titles']|length) %} 
+            {% for cont in range (top['titles']|length) %}
                 {% include 'includes/box.html' %}
             {% endfor %}
         </div>

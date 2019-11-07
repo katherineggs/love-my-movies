@@ -1,6 +1,7 @@
-body{background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d)}
+body{background: linear-gradient(to right, #1a6d3b, #fbd786, #f7797d)}
 .container1{
-    background: linear-gradient(to right, #8ff1b6, #f3ca6b, #f5666a);
+    background-color: aliceblue;
+    /* background: linear-gradient(to right, #8ff1b6, #f3ca6b, #f5666a); */
     padding: 1% 0 1% 5%;
     position: static;
     top: 0%;
@@ -116,16 +117,34 @@ h1{
     float: right;
 }
 
-
-
-/* input[name=button1]{
-    height: 48px;
-    width: 48px;
-    padding: 0 0 0 15%;
-}
-input[name=button2]{
-    height: 48px;
-    width: 48px;
-    padding: 0 0 0 30%;
-} */
-
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    float: left;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 100%;
+    margin-left: -80px;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+  }
+  

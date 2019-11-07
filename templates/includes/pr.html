@@ -1,0 +1,15 @@
+{% set votos = top['votos'][cont] %}
+{% if top == dicc['playing_now'] or top == dicc['upcoming']%}
+<form action="">
+    <input class="img1" name="button1" type="image" src="static/heart3.png" alt="like" onclick="myFunction()">
+    <h2 class="count" id="demo">
+            {{votos+}}
+    </h2>
+    <input class="img1" name="button2" type="image" src="static/ex5.png" alt="dislike" >
+</form>
+{%endif%}
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "{votos = votos +1 }{{votos}}";
+    }
+</script>

@@ -38,31 +38,49 @@
             {% set over = (over[cont])[:100] %}
             {{over}}...
         </div>
+       
         <!-- boton -->
         {% if top == dicc['playing_now'] or top == dicc['upcoming']%}
         <a href=""> 
             <img class="special" src="static/heart3.png">
         </a>
-        <!-- votos -->
-        <h2 class="spe_count">
-            {% set votos = top['votos'] %}
-            {{votos[cont]}}
+
+        {% set votos = top['votos'][cont] %}
+        <!-- votos -->            
+        <h2 class="spe_count" id="demo">
+            {{votos}}
         </h2>
+
         <!-- boton -->
         <a href="">
             <img class="special" src="static/ex5.png">
         </a> 
+
+        
         {% else %}
         <a href=""> 
             <img class="img1" src="static/heart3.png">
         </a>
         <!-- votos -->
-        <h2 class="count">
-            {% set votos = top['votos'] %}
-            {{votos[cont]}}
+        <h2 class="count" id="demo">
+            {% set votos = top['votos'][cont] %}
+            {{votos}}
         </h2>
         <a href="">
             <img class="img1" src="static/ex5.png">
         </a> 
         {%endif%}
+
+        <!-- <div class="popup" onclick="myFunction()"> + 
+            {% set fecha = top['date'] %}
+            <span class="popuptext" id="myPopup">
+                Released on: {{fecha[cont]}}
+            </span>
+        </div>
+
+        <script>
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show")}
+        </script> -->
 </div>

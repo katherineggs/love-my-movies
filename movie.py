@@ -22,14 +22,15 @@ def config(url):
 dicc = {}
 def diccionario(url,nombre):
     results = config(url)["results"]
-    titulos,poster, votos, overview, adult = [], [], [], [], []
+    titulos,poster, votos, overview, adult, date = [], [], [], [], [], []
     for i in results:
         titulos.append(i["original_title"])
         poster.append(i["poster_path"])
         votos.append(i["vote_count"])
         overview.append(i["overview"])
         adult.append(i["adult"])
-    dicc[nombre] ={"titles":titulos, "poster":poster, "votos":votos, "overview":overview, "adult":adult}
+        date.append(i["release_date"])
+    dicc[nombre] ={"titles":titulos, "poster":poster, "votos":votos, "overview":overview, "adult":adult, "date":date}
     return dicc
 
 @app.route("/")
